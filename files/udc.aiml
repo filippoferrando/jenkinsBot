@@ -1,5 +1,4 @@
 <aiml>
-<!-- insert your AIML categories here -->
 <category>
 <pattern>*</pattern>
 <template>

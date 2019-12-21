@@ -1,24 +1,5 @@
 <aiml version="2.0">
-<!--
- QUESTO FILE GESTISCE L'ORDINE DELLE BEVANDE, TUTTE LE REGOLE SONO NEL TOPIC "bere"  
--->
-<!--
- CI SONO 3 REGOLE CHE GESTISCONO LA RISPOSTA ALLA DOMANDA "COSA VORRESTE DA BERE?" 
--->
-<!--
- A OGNI POSSIBILE RISPOSTA (R10, R11, R12) SEGUE LA DOMANDA DEL BOT "ALTRO?" 
--->
-<!--
- SI ILLUSTRA L'UTILIZZO DELLE VARIABILI (PREDICATE) IN AIML 
--->
-<!--
- IL BOT REGISTRA SEMPRE DUE VARIABILI, PER SEMPLICITA', bevanda1 e bevanda2 
--->
-<!--
- SONO ASSEGNATE A PARTIRE DA QUELLO CHE RISPONDE L'UTENTE, LA SECONDA PUO' RESTARE VUOTA 
--->
 <topic name="bere">
-<!-- R10 -->
 <category>
 <pattern>Vorrei *</pattern>
 <that>* COSA VORRESTE DA BERE</that>
@@ -32,7 +13,7 @@
 Altro?
 </template>
 </category>
-<!-- R11 -->
+
 <category>
 <pattern>*</pattern>
 <that>* COSA VORREBBE DA BERE</that>
@@ -46,7 +27,6 @@ Altro?
 </think>
 </template>
 </category>
-<!-- R12 -->
 <category>
 <pattern>Prendo *</pattern>
 <that>* COSA VORREBBE DA BERE</that>
@@ -60,15 +40,6 @@ Va bene. Altro?
 </think>
 </template>
 </category>
-<!--
- LE DUE REGOLE CHE SEGUONO GESTISCONO LE POSSIBILI RISPOSTE ALLA DOMANDA "ALTRO?" 
--->
-<!-- ENTRAMBE SETTANO IL NUOVO TOPIC A "mangiare" -->
-<!--
- RISPOSTA QUALSIASI ALLA DOMANDA "ALTRO?" CHE E' NEL TEMPLATE DI TUTTE LE REGOLE PRECEDENTI  
--->
-<!-- RIASSEGNA SEMPRE LA SECONDA VARIABILE -->
-<!-- R13 -->
 <category>
 <pattern>*</pattern>
 <that> ^ ALTRO</that>
@@ -81,10 +52,6 @@ Va bene. Altro?
 </think>
 </template>
 </category>
-<!--
- RISPOSTA "no" ALLA DOMANDA "ALTRO?" CHE E' NEL TEMPLATE DI TUTTE LE REGOLE PRECEDENTI  
--->
-<!-- R14 -->
 <category>
 <pattern>No</pattern>
 <that> ^ ALTRO</that>
